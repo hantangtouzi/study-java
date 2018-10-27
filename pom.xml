@@ -11,6 +11,7 @@
     <modules>
         <module>EffectiveJava2</module>
         <module>ThinkInJava</module>
+        <module>CoreJava</module>
     </modules>
 
 
