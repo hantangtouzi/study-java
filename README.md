@@ -1,6 +1,6 @@
 # study-java
 
-##Java基础知识
+## Java基础知识
 
 1. Algorithms 用Java语言实现的各种初级及高级算法.
 
