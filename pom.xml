@@ -13,6 +13,7 @@
         <module>ThinkInJava</module>
         <module>CoreJava</module>
         <module>Core</module>
+        <module>Algorithms</module>
     </modules>
 
 
