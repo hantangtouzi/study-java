@@ -6,12 +6,22 @@ package com.hantangtouzi.algorithm.sort;
  */
 
 public class Selection {
-    private static final int[] samples = {9, 6, 5, 8};
+    private static final int[] a = {9, 6, 5, 8, 4, 3, 2, 7, 1};
 
     public static void main(String[] args) {
-        show(samples);
-        Selection.sort(samples);
-        show(samples);
+        sort(a);
+        show(a);
+        sorted(a);
+    }
+
+    private static void sorted(int[] a) {
+        boolean flag = true;
+        for (int i = 1; i < a.length; i++) {
+            if (a[i - 1] > a[i]) {
+                flag = false;
+            }
+        }
+        System.out.println(flag ? "排序成功" : "排序失败");
     }
 
     private static void show(int[] a) {
