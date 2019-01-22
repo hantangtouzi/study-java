@@ -6,4 +6,7 @@ package com.hantangtouzi.my.mycollection;
  */
 
 public class MyLinkedList {
+    public MyLinkedList() {
+
+    }
 }
