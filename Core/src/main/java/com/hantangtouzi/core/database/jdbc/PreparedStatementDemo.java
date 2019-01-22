@@ -1,5 +1,8 @@
 package com.hantangtouzi.core.database.jdbc;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
 /**
  * @author WilliamChang.
  * Created on 2019-01-22 13:17:42
@@ -7,6 +10,15 @@ package com.hantangtouzi.core.database.jdbc;
 
 public class PreparedStatementDemo {
     public static void main(String[] args) {
-
+        Connection connection = ConnectionDemo.getConnection();
+        try (PreparedStatement preparedStatement = connection.prepareStatement("select * from t_user")) {
+            if (preparedStatement != null) {
+                System.out.println("PreparedStatementSuccess");
+            } else {
+                System.out.println("PreparedStatement Failure");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
