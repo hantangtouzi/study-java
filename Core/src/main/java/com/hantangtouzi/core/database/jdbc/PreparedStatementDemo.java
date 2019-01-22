@@ -6,4 +6,7 @@ package com.hantangtouzi.core.database.jdbc;
  */
 
 public class PreparedStatementDemo {
+    public static void main(String[] args) {
+
+    }
 }
