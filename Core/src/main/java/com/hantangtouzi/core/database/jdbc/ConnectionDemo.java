@@ -9,14 +9,17 @@ import java.sql.SQLException;
  * Created on 2018/11/10 16:59
  */
 
-public class DbConnection {
+public class ConnectionDemo {
     public static void main(String[] args) {
+        getConnection();
+    }
+
+    public static Connection getConnection() {
         String jdbcDriver = "com.mysql.jdbc.Driver";
         String url = "jdbc:mysql://localhost:3306/studyjava?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true";
         String username = "root";
         String password = "root";
         Connection connection = null;
-
         try {
             Class.forName(jdbcDriver);
             connection = DriverManager.getConnection(url, username, password);
@@ -25,6 +28,7 @@ public class DbConnection {
             } else {
                 System.out.println("Connect database faulure!");
             }
+
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -39,5 +43,6 @@ public class DbConnection {
                 }
             }
         }
+        return connection;
     }
 }
