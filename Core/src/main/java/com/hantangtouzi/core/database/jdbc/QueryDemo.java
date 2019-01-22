@@ -6,4 +6,7 @@ package com.hantangtouzi.core.database.jdbc;
  */
 
 public class QueryDemo {
+    public static void main(String[] args) {
+
+    }
 }
