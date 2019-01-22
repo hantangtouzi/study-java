@@ -6,4 +6,9 @@ package com.hantangtouzi.my.mycollection;
  */
 
 public class MyArrayList {
+
+    public MyArrayList() {
+
+    }
+
 }
