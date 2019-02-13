@@ -1,4 +1,4 @@
-package com.hantangtouzi.core.database.jdbc;
+package com.hantangtouzi.core.jdbc;
 
 /**
  * @author WilliamChang.

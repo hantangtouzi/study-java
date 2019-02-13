@@ -1,4 +1,4 @@
-package com.hantangtouzi.core.database.jdbc;
+package com.hantangtouzi.core.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
