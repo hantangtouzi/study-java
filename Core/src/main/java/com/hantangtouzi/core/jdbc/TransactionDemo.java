@@ -12,9 +12,9 @@ import java.sql.Statement;
 
 public class TransactionDemo {
     public static void main(String[] args) throws SQLException {
-        String url = "";
-        String user = "sa";
-        String password = "";
+        String url = "jdbc";
+        String user = "root";
+        String password = "root";
 
         Connection connection = DriverManager.getConnection(url, user, password);
         String sql = "delete from t_user where id = 1";
