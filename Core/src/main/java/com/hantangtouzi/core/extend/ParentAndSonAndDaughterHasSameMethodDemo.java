@@ -8,13 +8,13 @@ package com.hantangtouzi.core.extend;
 public class ParentAndSonAndDaughterHasSameMethodDemo {
     public static void main(String[] args) {
         ParentHasSameMethod p = new SonHasSameMethod();
-        p.play();
+        // p.play();
     }
 }
 
 
-class ParentHasSameMethod{
-    public void play() {
+class ParentHasSameMethod {
+    private void play() {
         System.out.println("parent play");
     }
 }
