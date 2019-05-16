@@ -20,7 +20,7 @@ public class StatementDemo {
     }
 
     private static Statement getStatement() {
-        Connection connection = ConnectionDemo.getConnection();
+        Connection connection = DbUtil.getConnection();
         Statement statement = null;
         try {
             statement = connection.createStatement();

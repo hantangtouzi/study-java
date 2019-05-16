@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 
 public class PreparedStatementDemo {
     public static void main(String[] args) {
-        Connection connection = ConnectionDemo.getConnection();
+        Connection connection = DbUtil.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement("select * from t_user")) {
             if (preparedStatement != null) {
                 System.out.println("PreparedStatementSuccess");

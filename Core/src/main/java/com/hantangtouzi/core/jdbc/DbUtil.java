@@ -6,33 +6,33 @@ import java.sql.SQLException;
 
 /**
  * @author WilliamChang.
- * Created on 2018/11/10 16:59
+ * Created on 2019-05-16 14:40:17
  */
 
-public class ConnectionDemo {
-    public static void main(String[] args) throws Exception {
-        getConnection();
-    }
-
-    public static void getConnection() throws Exception {
+public class DbUtil {
+    public static Connection getConnection() {
         String jdbcDriver = "org.h2.Driver";
         String url = "jdbc:h2:mem:test;MODE=MYSQL;DB_CLOSE_ON_EXIT=TRUE";
         String username = "sa";
         String password = "";
 
-        Class.forName(jdbcDriver);
+        Connection connection = null;
 
-        try (Connection connection = DriverManager.getConnection(url, username, password)) {
-
+        try {
+            Class.forName(jdbcDriver);
+            connection = DriverManager.getConnection(url, username, password);
             if (connection != null) {
                 System.out.println("Connect database success!");
             } else {
                 System.out.println("Connect database faulure!");
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
+
+        return connection;
 
     }
 }
