@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class ArrayClone {
     public static void main(String[] args) {
         // String[] a = new String[]{"a", "b", "c"};
-        String[] a = {"a", "b", "c"};
+        String[] a =   {"a", "b", "c"};
         String[] b = a.clone();
         System.out.println(Arrays.equals(a, b));
         System.out.println(b == a);
