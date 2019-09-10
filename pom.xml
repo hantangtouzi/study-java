@@ -16,6 +16,7 @@
         <module>Algorithms</module>
         <module>LeetCode</module>
         <module>EffectiveJava3</module>
+        <module>Util</module>
     </modules>
 
     <properties>
