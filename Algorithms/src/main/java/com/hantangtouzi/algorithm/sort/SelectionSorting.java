@@ -5,7 +5,7 @@ package com.hantangtouzi.algorithm.sort;
  * Created on 2019-01-22 01-17
  */
 
-public class Selection {
+public class SelectionSorting {
     private static final int[] a = {9, 6, 5, 8, 4, 3, 2, 7, 1};
 
     public static void main(String[] args) {
