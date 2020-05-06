@@ -11,10 +11,11 @@ import java.sql.SQLException;
 
 public class ConnectionDemo {
     public static void main(String[] args) throws Exception {
-        getConnection();
+        Connection connection = getConnection();
+        DbUtil.closeConnection(connection);
     }
 
-    public static void getConnection() throws Exception {
+    public static Connection getConnection() throws Exception {
         String jdbcDriver = "org.h2.Driver";
         String url = "jdbc:h2:mem:test;MODE=MYSQL;DB_CLOSE_ON_EXIT=TRUE";
         String username = "sa";
@@ -23,16 +24,16 @@ public class ConnectionDemo {
         Class.forName(jdbcDriver);
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
-
             if (connection != null) {
                 System.out.println("Connect database success!");
+                return connection;
             } else {
                 System.out.println("Connect database faulure!");
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
+        return null;
     }
 }
